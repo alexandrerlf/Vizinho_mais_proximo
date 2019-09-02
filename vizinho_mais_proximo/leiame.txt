@@ -1,5 +1,5 @@
 d = numero de cidades
-v = numero de veiculos
+v = numero de veículos
 c = capacidade cada veiculo
 
 Demanda
