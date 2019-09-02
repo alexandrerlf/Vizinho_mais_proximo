@@ -1,3 +1,7 @@
+d = numero de cidades
+v = numero de veiculos
+c = capacidade cada veiculo
+
 Demanda
 	[N][1](para cada cidade)
 
