@@ -1,5 +1,0 @@
-Demanda
-	[N][1](para cada cidade)
-
-EDGE_WEIGHT_SECTION
-	[N][N]dist cid x dist cid
