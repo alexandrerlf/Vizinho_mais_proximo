@@ -28,21 +28,21 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
 	    file.open("P-n16-k8-d16-v8-c35.txt");
     }
 	
-    int acc, l, c;
+    int acc, l, c;//auxiliar e interadores
 	
     bool flag = false;
-    int min = cap;
+    int min = cap;//distancia minima
     int v_atual = 0;//guarda o valor da cidade atual visitada
-    int aux;
-    int cont = 0;
+    int aux;//numero da proxima cidade
+    int cont = 0;//interador
     int erro = 0;//estouro da capacidade	
     int custo = 0;//somatorio dos custos	
 	
-    int matrix[d][d];
+    int matrix[d][d];//matrix de distancias
     vector<int> demanda;//cada indice refencia a demanda desta cidade	
     bool atendido[d];//cada posição indicada para cada cidade em ordem visitada	
     bool chegada [v];//armazena a chegada do veiculo
-    int veiculo[v];
+    int veiculo[v];//numeros de veiculo com suas capacidades
 	
     for( int k = 0; k < v; k++){
 	    veiculo[k] = cap;
@@ -99,19 +99,19 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
                         min = matrix[v_atual][c];
                         aux = c;                                                                       
                     }
-                }                
+                }//fim for menor arco                
 
                 veiculo[v] -= demanda[aux];//diminui a capacidade do veiculo pela demanda 
                 
                 if(veiculo[v] < 0){
-                    veiculo[v] += demanda[aux];                    
-                    erro = demanda[aux] - veiculo[v];
+                    veiculo[v] += demanda[aux];//devolve a demanda retirada, pois nao pode ser atendidada                    
+                    erro = demanda[aux] - veiculo[v];//adquirir o quanto não pode atender
                     cout << "\t" <<  v_atual << " para " << aux << endl;
                     cout << "\t" <<  aux << " para " << 0 << endl;
                     cout << "* city " << aux << " abastecida com " << veiculo[v] << ", falta " << erro << " item para estar atendida" << endl;                    
-                    veiculo[v] = veiculo[v] - ( demanda[aux] - erro );
-                    demanda[aux] = erro;                                  
-                    chegada[v] = true;
+                    veiculo[v] = veiculo[v] - ( demanda[aux] - erro );//atende com o que pode
+                    demanda[aux] = erro;//recoloca o quanto falta para atender                                  
+                    chegada[v] = true;//veiculo volta pois esta vazio
                     custo +=min;//atualiza o custo                                                         
 
                 }else{//significa que a demanda foi atendida por nao estar negativo
@@ -150,18 +150,18 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
                     break;
                 }
 
-            }
+            }//fim-for das cidades de partida
             cout << endl;
             cout << "veiculo " << v << " chegou ao deposito " << "com " << veiculo[v] <<  " itens" << endl << endl;
             cout << "custo de tranporte veiculo " << v << " : " << (custo + matrix[aux][0]) << endl; //calcula ultimo custo ao deposito
             cout << "he a solucao inicial deste veiculo a partir do vizinho mais proximo" << endl ;
             cout << "\n" << endl;
-            flag = false;//re-init
-            v_atual = 0;//re-init    
-            cont = 0;//re-init
+            flag = false;//re-init's
+            v_atual = 0;    
+            cont = 0;
             custo = 0;                          
-        }     
-    }
+        }//fim-if     
+    }//fim-while
     file.close();
 }
 
