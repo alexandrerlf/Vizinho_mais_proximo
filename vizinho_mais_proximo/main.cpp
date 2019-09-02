@@ -83,7 +83,7 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
     cout << "\n" << endl;
     fimteste*/ 
 	
-	//vizinho mais proximo
+    //vizinho mais proximo
     while(v > 0){
 
         v--;//executa os veiculos do maior ao zero        
