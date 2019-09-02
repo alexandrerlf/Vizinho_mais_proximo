@@ -44,18 +44,18 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
     bool chegada [v];//armazena a chegada do veiculo
     int veiculo[v];
 	
-	for( int k = 0; k < v; k++){
-		veiculo[k] = cap;
-		chegada[k] = false;
-	}
-	for(l = 0; l < d; l++){
+    for( int k = 0; k < v; k++){
+	    veiculo[k] = cap;
+	    chegada[k] = false;
+    }
+    for(l = 0; l < d; l++){
         if(l == 0)
             atendido[l] = true;// sai do deposito
         else
             atendido[l] = false;//cidades para visitar                  
     }	
 	
-	while(!file.eof()){//adquirir os valores de demanda e pesos entre cidades
+    while(!file.eof()){//adquirir os valores de demanda e pesos entre cidades
         for (l = 0; l < d; l++){
             file >> acc;
             demanda.push_back(acc);
@@ -67,8 +67,8 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
             }           
         }      
     }
-	/*teste
-	for (l = 0; l < d; l++){
+    /*teste
+    for (l = 0; l < d; l++){
         cout << demanda[l];
         cout << " ";        
     }
@@ -78,10 +78,10 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
         for (c = 0; c < d; c++){                
             cout << matrix[l][c];
             cout << " ";               
-            }           
+        }           
     }
-	cout << "\n" << endl;
-	fimteste*/ 
+    cout << "\n" << endl;
+    fimteste*/ 
 	
 	//vizinho mais proximo
     while(v > 0){
