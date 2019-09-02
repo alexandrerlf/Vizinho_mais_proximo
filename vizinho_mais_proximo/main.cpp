@@ -97,8 +97,7 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
                 for (c = 0; c < d; c++){                      
                     if( ((matrix[v_atual][c]) < min) && (atendido[c] == false) && ((matrix[v_atual][c]) != 0) ){//calcula menor arco entre cidades                        
                         min = matrix[v_atual][c];
-                        aux = c; 
-                                                                       
+                        aux = c;                                                                       
                     }
                 }                
 
@@ -163,92 +162,92 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
             custo = 0;                          
         }     
     }
-	file.close();
+    file.close();
 }
 
 void test1(){//P-n19-k2-d19-v2-c160
 	
     const int d = 19;//numero de cidades
     const int cap = 160;//capacidade cada veiculo
-	int v = 2;//numero de veiculos
-	int caso = 1;       
+    int v = 2;//numero de veiculos
+    int caso = 1;       
   	
     cout << endl << endl;   
-	vizinho_mais_proximo(d, cap, v, caso);   	
+    vizinho_mais_proximo(d, cap, v, caso);   	
 }
 
 void test2(){//P-n20-k2-d20-v2-c160	
 	
     const int d = 20;//numero de cidades
     const int cap = 160;//capacidade cada veiculo
-	int v = 2;//numero de veiculos
-	int caso = 2;       
+    int v = 2;//numero de veiculos
+    int caso = 2;       
   	
     cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);	
+    vizinho_mais_proximo(d, cap, v, caso);	
 }
 
 void test3(){//P-n23-k8-d23-v8-c40
 	
     const int d = 23;//numero de cidades
     const int cap = 40;//capacidade cada veiculo 
-	int v = 8;//numero de veiculos 
-	int caso = 3;       
+    int v = 8;//numero de veiculos 
+    int caso = 3;       
   	
     cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);
+    vizinho_mais_proximo(d, cap, v, caso);
 }
 
 void test4(){//P-n45-k5-d45-v5-c150	
 	
     const int d = 45;//numero de cidades
     const int cap = 150;//capacidade cada veiculo 
-	int v = 5;//numero de veiculos 
-	int caso = 4;       
+    int v = 5;//numero de veiculos 
+    int caso = 4;       
   	
     cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);	
+    vizinho_mais_proximo(d, cap, v, caso);	
 }
 void test5(){//P-n50-k10-d50-v10-c100
 	
     const int d = 50;//numero de cidades
     const int cap = 100;//capacidade cada veiculo 
-	int v = 10;//numero de veiculos 
-	int caso = 5;       
+    int v = 10;//numero de veiculos 
+    int caso = 5;       
   	
     cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);	
+    vizinho_mais_proximo(d, cap, v, caso);	
 }
 void test6(){//P-n51-k10-d51-v10-c80
 	
     const int d = 51;//numero de cidades
     const int cap = 80;//capacidade cada veiculo 
-	int v = 10;//numero de veiculos 
-	int caso = 6;       
+    int v = 10;//numero de veiculos 
+    int caso = 6;       
   	
     cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);
+    vizinho_mais_proximo(d, cap, v, caso);
 }
 void test7(){//P-n55-k7-d55-v7-c170
 	
     const int d = 55;//numero de cidades
     const int cap = 170;//capacidade cada veiculo 
-	int v = 7;//numero de veiculos 
-	int caso = 7;       
+    int v = 7;//numero de veiculos 
+    int caso = 7;       
   	
     cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);
+    vizinho_mais_proximo(d, cap, v, caso);
 }
 
 void test8(){//P-n16-k8-d16-v8-c35
 	
     const int d = 16;//numero de cidades
     const int cap = 35;//capacidade cada veiculo
-	int v = 8;//numero de veiculos
-	int caso = 8;
+    int v = 8;//numero de veiculos
+    int caso = 8;
 	
-	cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);
+    cout << endl << endl;      
+    vizinho_mais_proximo(d, cap, v, caso);
 }
 
 int main(){  
@@ -267,7 +266,7 @@ int main(){
         cout << "5 - P-n50-k10-d50-v10-c100" << endl;
         cout << "6 - P-n51-k10-d51-v10-c80" << endl;
         cout << "7 - P-n55-k7-d55-v7-c170" << endl;
-		cout << "8 - P-n16-k8-d16-v8-c35" << endl;	
+        cout << "8 - P-n16-k8-d16-v8-c35" << endl;	
         cout << "9 - Sair" << endl;
         
         cout << "Opcao: ";
@@ -313,10 +312,10 @@ int main(){
                 test7();
                 break;
 			
-			case 8:
-				system("cls");
-				test8();
-				break;
+            case 8:
+                system("cls");
+                test8();
+                break;
         
             default:
                 break;
