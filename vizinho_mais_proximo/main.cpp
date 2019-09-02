@@ -9,24 +9,24 @@ using namespace std;
 
 void vizinho_mais_proximo(int d, int cap, int v, int caso ){
 	
-	ifstream file;
-	if(caso == 1){
-		file.open("P-n19-k2-d19-v2-c160.txt");
-	}else if(caso == 2){
-		file.open("P-n20-k2-d20-v2-c160.txt");
-	}else if(caso == 3){
-		file.open("P-n23-k8-d23-v8-c40.txt");
-	}else if(caso == 4){
-		file.open("P-n45-k5-d45-v5-c150.txt");
-	}else if(caso == 5){
-		file.open("P-n50-k10-d50-v10-c100.txt");
-	}else if(caso == 6){
-		file.open("P-n51-k10-d51-v10-c80.txt");
-	}else if(caso == 7){
-		file.open("P-n55-k7-d55-v7-c170.txt");
-	}else{
-		file.open("P-n16-k8-d16-v8-c35.txt");
-	}
+    ifstream file;
+    if(caso == 1){
+	    file.open("P-n19-k2-d19-v2-c160.txt");
+    }else if(caso == 2){
+	    file.open("P-n20-k2-d20-v2-c160.txt");
+    }else if(caso == 3){
+	    file.open("P-n23-k8-d23-v8-c40.txt");
+    }else if(caso == 4){
+	    file.open("P-n45-k5-d45-v5-c150.txt");
+    }else if(caso == 5){
+	    file.open("P-n50-k10-d50-v10-c100.txt");
+    }else if(caso == 6){
+	    file.open("P-n51-k10-d51-v10-c80.txt");
+    }else if(caso == 7){
+	    file.open("P-n55-k7-d55-v7-c170.txt");
+    }else{
+	    file.open("P-n16-k8-d16-v8-c35.txt");
+    }
 	
     int acc, l, c;
 	
