@@ -219,12 +219,12 @@ void test7(){//P-n55-k7-d55-v7-c170
 
 void test8(){//P-n16-k8-d16-v8-c35
 	
-	const int d = 16;//numero de cidades
-	const int cap = 35;//capacidade cada veiculo
+    const int d = 16;//numero de cidades
+    const int cap = 35;//capacidade cada veiculo
     int v = 9;//numero de veiculos
     int caso = 8;
 	
-	cout << endl << endl;      
+    cout << endl << endl;      
     vizinho_mais_proximo(d, cap, v, caso);
 }
 
@@ -293,7 +293,7 @@ int main(){
             case 8:
                 system("cls");
                 test8();
-            break;
+                break;
         
             default:
                 break;
