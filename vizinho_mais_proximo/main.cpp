@@ -28,7 +28,7 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
 	int acc, l, c;
 	
 	bool flag = false;
-	int min = cap;
+    int min = cap;
     int v_atual = 0;//guarda o valor da cidade atual visitada
     int aux;
     int cont = 0;
@@ -47,7 +47,7 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
 	}
 	for(l = 0; l < d; l++){
         if(l == 0)
-            atendido[l] = true;// sai do deposito
+            atendido[l] = true;// sai do deposito   
         else
             atendido[l] = false;//cidades para visitar                  
     }	
@@ -140,92 +140,92 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
             custo = 0;                          
         }     
     }
-	file.close();
+    file.close();
 }
 
 void test1(){//P-n19-k2-d19-v2-c160
 	
     const int d = 19;//numero de cidades
     const int cap = 160;//capacidade cada veiculo
-	int v = 3;//numero de veiculos, modificar para 3
-	int caso = 1;       
+    int v = 3;//numero de veiculos, modificar para 3
+    int caso = 1;       
   	
     cout << endl << endl;   
-	vizinho_mais_proximo(d, cap, v, caso);   	
+    vizinho_mais_proximo(d, cap, v, caso);   	
 }
 
 void test2(){//P-n20-k2-d20-v2-c160	
 	
     const int d = 20;//numero de cidades
     const int cap = 160;//capacidade cada veiculo
-	int v = 3;//numero de veiculos, modificador
-	int caso = 2;       
+    int v = 3;//numero de veiculos, modificador
+    int caso = 2;       
   	
     cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);	
+    vizinho_mais_proximo(d, cap, v, caso);	
 }
 
 void test3(){//P-n23-k8-d23-v8-c40
 	
     const int d = 23;//numero de cidades
     const int cap = 40;//capacidade cada veiculo 
-	int v = 10;//numero de veiculos, modificado 
-	int caso = 3;       
+    int v = 10;//numero de veiculos, modificado 
+    int caso = 3;       
   	
     cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);
+    vizinho_mais_proximo(d, cap, v, caso);
 }
 
 void test4(){//P-n45-k5-d45-v5-c150	
 	
     const int d = 45;//numero de cidades
     const int cap = 150;//capacidade cada veiculo 
-	int v = 5;//numero de veiculos 
-	int caso = 4;       
+    int v = 5;//numero de veiculos 
+    int caso = 4;       
   	
     cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);	
+    vizinho_mais_proximo(d, cap, v, caso);	
 }
 void test5(){//P-n50-k10-d50-v10-c100
 	
     const int d = 50;//numero de cidades
     const int cap = 100;//capacidade cada veiculo 
-	int v = 11;//numero de veiculos 
-	int caso = 5;       
+    int v = 11;//numero de veiculos 
+    int caso = 5;       
   	
     cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);	
+    vizinho_mais_proximo(d, cap, v, caso);	
 }
 void test6(){//P-n51-k10-d51-v10-c80
 	
     const int d = 51;//numero de cidades
     const int cap = 80;//capacidade cada veiculo 
-	int v = 12;//numero de veiculos 
-	int caso = 6;       
+    int v = 12;//numero de veiculos 
+    int caso = 6;       
   	
     cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);
+    vizinho_mais_proximo(d, cap, v, caso);
 }
 void test7(){//P-n55-k7-d55-v7-c170
 	
     const int d = 55;//numero de cidades
     const int cap = 170;//capacidade cada veiculo 
-	int v = 7;//numero de veiculos 
-	int caso = 7;       
+    int v = 7;//numero de veiculos 
+    int caso = 7;       
   	
     cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);
+    vizinho_mais_proximo(d, cap, v, caso);
 }
 
 void test8(){//P-n16-k8-d16-v8-c35
 	
 	const int d = 16;//numero de cidades
 	const int cap = 35;//capacidade cada veiculo
-	int v = 9;//numero de veiculos
-	int caso = 8;
+    int v = 9;//numero de veiculos
+    int caso = 8;
 	
 	cout << endl << endl;      
-	vizinho_mais_proximo(d, cap, v, caso);
+    vizinho_mais_proximo(d, cap, v, caso);
 }
 
 int main(){  
@@ -290,10 +290,10 @@ int main(){
                 test7();
                 break;
 			
-			case 8:
-				system("cls");
-				test8();
-				break;
+            case 8:
+                system("cls");
+                test8();
+            break;
         
             default:
                 break;
