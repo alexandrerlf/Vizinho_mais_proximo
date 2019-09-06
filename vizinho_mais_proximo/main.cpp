@@ -134,9 +134,9 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
             cout << "custo de tranporte veiculo " << v << " : " << custo << endl; //calcula ultimo custo ao deposito
             cout << "he a solucao inicial deste veiculo a partir do vizinho mais proximo" << endl ;
             cout << "\n" << endl;
-            flag = false;//re-init
-            v_atual = 0;//re-init    
-            cont = 0;//re-init
+            flag = false;//re-init's
+            v_atual = 0;/    
+            cont = 0;
             custo = 0;                          
         }     
     }
