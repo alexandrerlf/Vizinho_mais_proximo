@@ -69,11 +69,11 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
     int veiculo[v];     //vetor de veiculo com capacidade
     bool atendido[d];   //cada posição indicada para cada cidade em ordem visitada 
     bool chegada [v];   //armazena a chegada do veiculo
-    vector<int> rota;
+    /*vector<int> rota;
     int v_swap = v;
     vector<int> rota_swap;
     int custo_swap = 0;
-    int aux_swap;
+    int aux_swap;*/
     
     for( int k = 0; k < v; k++){
         veiculo[k] = cap;
@@ -150,8 +150,8 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
                 if(veiculo[v] < 0){
                     veiculo[v] += demanda[aux];//devolve a demanda retirada, porque ficou negativa               
                     output << v_atual << ", " << 0 ; 
-                    rota.push_back(v_atual);
-                    rota.push_back(0);                                                  
+                    //rota.push_back(v_atual);
+                   // rota.push_back(0);                                                  
                     chegada[v] = true;                    
                     custo = custo + matrix[v_atual][0];//soma o ultimo custo                                                       
 
@@ -159,7 +159,7 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
                     demanda[aux] -= demanda[aux];
                     atendido[aux] = true;//marca a cidade como visitada                                     
                     output << v_atual << ", ";
-                    rota.push_back(v_atual);
+                    //rota.push_back(v_atual);
                     custo +=min;//atualiza o custo                      
                 }               
                                   
@@ -180,8 +180,8 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
                 if( cont == d){//e seta a flag de chegada ao desposito
                    chegada[v] = true; 
                    output << aux << ", " << 0 ;
-                   rota.push_back(aux);
-                   rota.push_back(0);
+                   //rota.push_back(aux);
+                   //rota.push_back(0);
                    custo = custo + matrix[aux][0];//soma ultimo custo
                 }
 
@@ -219,7 +219,7 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
     output << "\t" << "Tempo de exercucao " << ": " << (tempo_final - tempo_inicial) / (double)CLOCKS_PER_SEC << " seg" << endl;
 
 
-    cout << "Rota antes swap " << endl;
+    /*cout << "Rota antes swap " << endl;
     for(int i = 0; i < rota.size(); i++){
         cout << rota[i] << ", ";
     }
@@ -265,10 +265,7 @@ void vizinho_mais_proximo(int d, int cap, int v, int caso ){
     for(int i = 0; i < rota.size(); i++){
         cout << rota[i] << ", ";
     }
-    cout << "Custo: " << custo_swap;
-
-
-
+    cout << "Custo: " << custo_swap;*/
 
     //SALVA OUTPUT NO .TXT
     ofstream saida("saida.txt", ofstream::out);
